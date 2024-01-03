@@ -1,32 +1,27 @@
-//EventList
-
-
-
-{
-    "PlanBirthdayParty": "PlanBirthdayParty 1",
-    "PlanBabyshower": "PlanBabyshower 1",
-    "PlanWedding": "PlanWedding 1",
-    "PlannFamilyreunion": "PlannFamilyreunion 1",
+[
+  {
+    "calender": "Passage",
+    "pricing": "Architect",
     "Events": "1"
   },
   {
-    "PlanBirthdayParty": "PlanBirthdayParty 2",
-    "PlanBabyshower": "PlanBabyshower 2",
-    "PlanWedding": "PlanWedding 2",
-    "PlannFamilyreunion": "PlannFamilyreunion 2",
+    "calender": "24/7",
+    "pricing": "Estonia",
     "Events": "2"
   },
   {
-    "PlanBirthdayParty": "PlanBirthdayParty 3",
-    "PlanBabyshower": "PlanBabyshower 3",
-    "PlanWedding": "PlanWedding 3",
-    "PlannFamilyreunion": "PlannFamilyreunion 3",
+    "calender": "Transexual",
+    "pricing": "discrete",
     "Events": "3"
   },
   {
-    "PlanBirthdayParty": "PlanBirthdayParty 4",
-    "PlanBabyshower": "PlanBabyshower 4",
-    "PlanWedding": "PlanWedding 4",
-    "PlannFamilyreunion": "PlannFamilyreunion 4",
+    "calender": "payment",
+    "pricing": "unleash",
     "Events": "4"
-  };
+  },
+  {
+    "calender": "transmitter",
+    "pricing": "behold",
+    "Events": "5"
+  }
+]

@@ -1,57 +1,55 @@
-//EventHandler
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-function EventTodo({ todo, completeTodo, deleteTodo, editTodo }) {
+const EventTodo = ({ todo, deleteTodo, editTodo }) => {
   const [edit, setEdit] = useState(false);
   const [error, setError] = useState(false);
-  const [text, setText] = useState(todo.text);
+  const [text, setText] = useState(todo.name);
 
   const toggleEdit = () => {
     setEdit(!edit);
-    
-    setText(todo.text);
+    setText(todo.name);
     setError(false);
   };
 
   const handleEdit = (evt) => {
-    (evt.target.value === "") ? setError(true) : setError(false);
+    setError(evt.target.value === '');
     setText(evt.target.value);
   };
 
-  const handleUpdate = (id, text) => {
-    editTodo(id, text);
-    toggleEdit();
+  const handleUpdate = () => {
+    if (!error) {
+      editTodo(todo.id, { ...todo, name: text });
+      toggleEdit();
+    }
   };
- const handleDelete= (id,text) =>{
-  
 
-
- }
   return (
-    <li>
-      <input type="checkbox" checked={todo.isCompleted} onChange={() => completeTodo(todo.id)} />
-
-      
-
+    <div className="event">
       {!edit ? (
         <>
-          <span style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}> {todo.text} </span>
-          <button onClick={() => deleteTodo(todo.id)}>X</button>
-          <button onClick={() => toggleEdit()} disabled={todo.isCompleted}>
-            Edit
-          </button>
+          <strong>Name:</strong> {todo.name}
+          <br />
+          <strong>Date:</strong> {todo.date}
+          <br />
+          <strong>Location:</strong> {todo.location}
+          <br />
+          <strong>Description:</strong> {todo.description}
+          <br />
+          <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+          <button onClick={toggleEdit}>Edit</button>
         </>
       ) : (
         <>
+          <label>Name:</label>
           <input type="text" value={text} onChange={handleEdit} />
-          <button disabled={error} onClick={() => handleUpdate(todo.id, text)}>
+          <button disabled={error} onClick={handleUpdate}>
             Update
           </button>
-          <button onClick={() => toggleEdit()}> Cancel </button>
+          <button onClick={toggleEdit}>Cancel</button>
         </>
       )}
-    </li>
+    </div>
   );
-}
+};
 
 export default EventTodo;

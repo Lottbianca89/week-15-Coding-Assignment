@@ -1,101 +1,36 @@
-.App {
-  text-align: center;
-  /* flex-wrap: ; */ /* flex-wrap needs a value, like flex-wrap: wrap; */
-  border: 1px solid; /* Add units to the border, like 1px solid; */
-  background-color: lightblue;
-  padding-top: 50px;
-  padding-right: 30px;
-  padding-bottom: 50px;
-  padding-left: 80px;
-}
-
-.nav {
-  align-items: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-
-}
-h1 { width:500px; margin: 0 auto; background: lightpink; text-align: center; } 
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #e1fb61;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white;
+  background: #072f63 url('https://wallpapercave.com/wp/wp7488228.jpg') center/cover no-repeat;
+  color: #fff;
+  background-color: #072f63;
+  /* Add the following background properties */
+  background-size: cover;
+  background-attachment: fixed; 
 }
 
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  color: #333;
-}
-
-ul {
+ul, li {
   list-style: none;
   padding: 0;
-}
-
-li {
   margin-bottom: 10px;
 }
 
 input[type="text"] {
-  width: 70%;
+  width: 100%;
   padding: 8px;
-  margin-right: 10px;
-}
-
-.h1 {
-  align-text: center
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 button {
   padding: 8px 12px;
   cursor: pointer;
-  background-color: #af4cad;
-  color: #ffffff;
   border: none;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 button:disabled {
@@ -103,14 +38,129 @@ button:disabled {
   cursor: not-allowed;
 }
 
-div {
+/* Event Component Styling */
+.event {
+  border: 1px solid #ddd;
+  align-content: center;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #d3d3d3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event button {
   margin-top: 10px;
+  background-color: #ff69b4;
 }
 
-strong {
-  margin-right: 5px;
+/* HomeWithEvents Component Styling */
+.home-with-events-container {
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input[type="checkbox"] {
-  margin-right: 4px;
+/* Additional Styling */
+.contact-container {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* HomeWithEvents Component Styling */
+.home-with-events-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-with-events-container h1 {
+  margin-bottom: 10px;
+}
+
+.home-with-events-container h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Additional Styling */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.event-section {
+  margin-bottom: 30px;
+}
+
+.contact-container {
+  align-content: center;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contact-container p {
+  font-size: 14px;
+  color:black;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
 }

@@ -1,12 +1,12 @@
-// Event.js
 import React from 'react';
 
-const Event = ({ Event, onDelete, onUpdate }) => {
+
+const Event = ({ event, onDelete, onUpdate }) => {
   return (
-    <div>
-      <p>{Event.title}</p>
-      <button onClick={() => onDelete(Event.id)}>Delete</button>
-      <button onClick={() => onUpdate(Event)}>Update</button>
+    <div className="event-container">
+      <p>{event.title}</p>
+      <button onClick={() => onDelete(event.id)}>Delete</button>
+      <button onClick={() => onUpdate(event)}>Update</button>
     </div>
   );
 };
